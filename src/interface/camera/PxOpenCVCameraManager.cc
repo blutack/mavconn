@@ -44,5 +44,7 @@ cv::VideoCapture*
 PxOpenCVCameraManager::getCamera(uint64_t captureIndex)
 {
 	cv::VideoCapture* cap = new cv::VideoCapture(captureIndex);
+	cap->set(CV_CAP_PROP_FRAME_WIDTH, 1280);
+	cap->set(CV_CAP_PROP_FRAME_HEIGHT, 720);
 	return cap;
 }

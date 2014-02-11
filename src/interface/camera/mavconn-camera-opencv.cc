@@ -664,8 +664,8 @@ int main(int argc, char* argv[])
 	cv::Size frameSize = frame.size();
 	fprintf(stderr, " %ix%i ", frameSize.width, frameSize.height);
 	fflush(stderr);
-	cv::Mat gray(frameSize, CV_8UC1);
-	cv::Mat gray2(frameSize, CV_8UC1);
+	cv::Mat gray(frameSize, CV_8UC3);
+	cv::Mat gray2(frameSize, CV_8UC3);
 
 	/*if (trigger && (timestamp < lastShutter+lastMessageDelay))
 	{
@@ -1046,15 +1046,7 @@ int main(int argc, char* argv[])
 					}
 					else
 					{
-						if (frame.channels() > 1)
-						{
-							cv::cvtColor(frame, gray, CV_RGB2GRAY);
-						}
-						else
-						{
-							frame.copyTo(gray);
-						}
-
+						frame.copyTo(gray);
 						server.writeMonoImage(gray, camSerial, timestamp, image_data, exposure);
 					}
 				}
