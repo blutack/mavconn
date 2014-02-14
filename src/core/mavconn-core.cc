@@ -42,7 +42,7 @@ This file is part of the MAVCONN project
 #include <glibtop/proclist.h>
 
 // MAVLINK message format includes
-#include "pixhawk/mavconn.h"
+#include "mavconn.h"
 #include "core/MAVConnParamClient.h"
 
 // Latency Benchmarking
