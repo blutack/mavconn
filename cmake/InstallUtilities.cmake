@@ -81,10 +81,10 @@ IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
   SET(MAVCONN_CAMERA_LIBRARIES
 	#${CMAKE_BINARY_DIR}/lib/libmvBlueFOX.so
 	#${CMAKE_BINARY_DIR}/lib/libmvBlueFOX.so.2.5.4
-	${CMAKE_BINARY_DIR}/lib/libmvDeviceManager.so
-	${CMAKE_BINARY_DIR}/lib/libmvDeviceManager.so.2.5.4
-	${CMAKE_BINARY_DIR}/lib/libmvPropHandling.so
-	${CMAKE_BINARY_DIR}/lib/libmvPropHandling.so.2.5.4
+	#${CMAKE_BINARY_DIR}/lib/libmvDeviceManager.so
+	#${CMAKE_BINARY_DIR}/lib/libmvDeviceManager.so.2.5.4
+	#${CMAKE_BINARY_DIR}/lib/libmvPropHandling.so
+	#${CMAKE_BINARY_DIR}/lib/libmvPropHandling.so.2.5.4
   )
   INSTALL(FILES ${MAVCONN_CAMERA_LIBRARIES} DESTINATION "/usr/local/lib")
 ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
